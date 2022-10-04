@@ -1,0 +1,40 @@
+* {
+  box-sizing:border-box;
+}
+body {
+  font-family:monospace;
+}
+
+.phone{
+  width: 400px;
+  height:800px;
+  border: 3px solid turquoise;
+  padding: 20px;
+}
+.phone__top{
+display: flex;
+justify-content: space-between;
+padding: 40px 20px;
+font-weight: bold;
+font-size: 2em;
+}
+
+.phone__playing-now{
+  display: flex;
+  margin: 10px 0;
+}
+.playing-now__img{
+  width: 170px;
+  height: 170px;
+  background-color: #FEBD11;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+
+
