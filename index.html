@@ -1,71 +1,128 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>nomad study</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>You Are Awesome!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="phone">
-      <div class="phone__top">
-        <i class="fas fa-times"></i>
-        <span class="top__playlist">Playlist</span>
-        <div class="top__empty"></div>
-      </div>
-      <div class="phone__playing-now">
-        <div class="playing-now__img"><i class="fas fa-image"></i></div>
-        <div class="playing-now__info">
-          <div class="playing-now__info__title">Random<br />Love</div>
-          <div class="playing-now__info__credit">by Divay Kapoor</div>
-        </div>
-      </div>
-      <div class="phone__btns">
-        <button class="btns__play">
-          &nbsp;<i class="fas fa-play"></i>&nbsp; Play &nbsp;
-        </button>
-        <button class="btns__heart"><i class="fas fa-heart"></i></button>
-        <button class="btns__add"><i class="fas fa-plus"></i></button>
-      </div>
-      <div class="phone__tracklist">
-        <div class="tracklist__track">
-          <div class="track__img"></div>
-          <div class="track__info">
-            <div class="track__info__title">Matargasti</div>
-            <div class="track__info__credit">Mohit Chauhan</div>
-          </div>
-        </div>
-        <div class="tracklist__track">
-          <div class="track__img"></div>
-          <div class="track__info">
-            <div class="track__info__title">Attitude</div>
-            <div class="track__info__credit">Lewis Ofman ・ Attitude</div>
-          </div>
-        </div>
-        <div class="tracklist__track">
-          <div class="track__img"></div>
-          <div class="track__info">
-            <div class="track__info__title">Try Everything</div>
-            <div class="track__info__credit">Shakira ・ Zootopia</div>
-          </div>
-        </div>
-        <div class="tracklist__track">
-          <div class="track__img"></div>
-          <div class="track__info">
-            <div class="track__info__title">Sunflower</div>
-            <div class="track__info__credit">Joseph vincent ・ Sunflower</div>
-          </div>
-        </div>
-      </div>
+    <header>
+        <i class="fas fa-bars"></i>
+        <h1>Library</h1>
+        <i class="fas fa-shopping-basket"></i>
+    </header>
+    <div class="search">
+      <input type="text" placeholder="Search books..." />
+      <i class="fas fa-search"></i>
     </div>
-    <script
-      src="https://kit.fontawesome.com/1af2041847.js"
-      crossorigin="anonymous"
-    ></script>
+    <main>
+        <h2>Book of the Day</h2>
+        <div class="book-of-the-day">
+            <img src="https://m.media-amazon.com/images/I/71Ih2rWClAL.jpg" class="book-of-the-day__cover">
+            <div class="book-of-the-day__data">
+                <h3 class="book-of-the-day__title">Harry Potter </h3><h3 class="book-of-the-day__title">And The Goblet Of Fire</h3>
+                <h5 class="book-of-the-day__author">J. K. Rowling</h5>
+                <div class="book-of-the-day__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="book-of-the-day__tags">
+                  <span class="book-of-the-day__tag">Fantasy</span>
+                  <span class="book-of-the-day__tag">Magic</span>
+                </div>
+                <div class="book-of-the-day__actions">
+                    <span class="book-of-the-day__bookmark"><i class="fas fa-bookmark"></i></span>
+                    <span class="book-of-the-day__book">Book now</span>
+                </div>
+            </div>
+        </div>
+        <h2>Top Adventures</h2>
+        <div class="top-adventures">
+            <div class="top-adventures__book">
+              <img src="https://m.media-amazon.com/images/I/71-++hbbERL._AC_SL1000_.jpg" />
+              <div class="top-adventures__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="top-adventures__book">
+              <img src="https://m.media-amazon.com/images/I/71MUiF4iVzL._AC_SL1000_.jpg" />
+              <div class="top-adventures__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="top-adventures__book">
+              <img src="https://m.media-amazon.com/images/I/71s7RjLd3fL._AC_SL1000_.jpg" />
+              <div class="top-adventures__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="top-adventures__book">
+              <img src="https://m.media-amazon.com/images/I/71ykU-RQ0nL._AC_SL1000_.jpg" />
+              <div class="top-adventures__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="top-adventures__book">
+              <img src="https://m.media-amazon.com/images/I/71xcuT33RpL._AC_SL1000_.jpg" />
+              <div class="top-adventures__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="top-adventures__book">
+              <img src="https://m.media-amazon.com/images/I/71EwgGuAS9L._AC_SL1000_.jpg" />
+              <div class="top-adventures__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+          <div class="top-adventures__book">
+              <img src="https://m.media-amazon.com/images/I/71Q1Iu4suSL._AC_SL1000_.jpg" />
+              <div class="top-adventures__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <h2>Popular authors</h2>
+        <div class="popular-authors">
+            <img src="https://m.media-amazon.com/images/I/B1deyDNJnjS._SY600_.jpg" />
+            <div class="popular-authors__data">
+              <h5 class="popular-authors__title">J. K. Rowling</h5>
+              <p class="popular-authors__bio">J.K. Rowling is best-known as the author of the seven Harry Potter books, which were published between 1997 and 2007. The enduringly popular adventures of Harry, Ron and Hermione have gone on to sell over 600 million copies, be translated into over 80 languages and made into eight blockbuster films.</p>
+            </div>
+        </div>
+    </main>
   </body>
 </html>
