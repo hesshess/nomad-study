@@ -1,128 +1,177 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>You Are Awesome!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>You Are Awesome!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="page">
     <header>
-        <i class="fas fa-bars"></i>
-        <h1>Library</h1>
-        <i class="fas fa-shopping-basket"></i>
-    </header>
-    <div class="search">
-      <input type="text" placeholder="Search books..." />
+      <i class="fas fa-arrow-left"></i>
       <i class="fas fa-search"></i>
+    </header>
+    <div class="taeyeon">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Kim_Tae-yeon_at_Incheon_Airport_on_August_29%2C_2019.png/640px-Kim_Tae-yeon_at_Incheon_Airport_on_August_29%2C_2019.png" />
+      <h2>Taeyeon</h2>
+      <h6>K-pop</h6>
     </div>
-    <main>
-        <h2>Book of the Day</h2>
-        <div class="book-of-the-day">
-            <img src="https://m.media-amazon.com/images/I/71Ih2rWClAL.jpg" class="book-of-the-day__cover">
-            <div class="book-of-the-day__data">
-                <h3 class="book-of-the-day__title">Harry Potter </h3><h3 class="book-of-the-day__title">And The Goblet Of Fire</h3>
-                <h5 class="book-of-the-day__author">J. K. Rowling</h5>
-                <div class="book-of-the-day__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="book-of-the-day__tags">
-                  <span class="book-of-the-day__tag">Fantasy</span>
-                  <span class="book-of-the-day__tag">Magic</span>
-                </div>
-                <div class="book-of-the-day__actions">
-                    <span class="book-of-the-day__bookmark"><i class="fas fa-bookmark"></i></span>
-                    <span class="book-of-the-day__book">Book now</span>
-                </div>
-            </div>
+    <div class="btns">
+      <span class="btns__btn">Shuffle</span>
+      <span class="btns__btn"><i class="fas fa-heart"></i>&nbsp;212K</span>
+    </div>
+    <ul class="songs">
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
         </div>
-        <h2>Top Adventures</h2>
-        <div class="top-adventures">
-            <div class="top-adventures__book">
-              <img src="https://m.media-amazon.com/images/I/71-++hbbERL._AC_SL1000_.jpg" />
-              <div class="top-adventures__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="top-adventures__book">
-              <img src="https://m.media-amazon.com/images/I/71MUiF4iVzL._AC_SL1000_.jpg" />
-              <div class="top-adventures__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="top-adventures__book">
-              <img src="https://m.media-amazon.com/images/I/71s7RjLd3fL._AC_SL1000_.jpg" />
-              <div class="top-adventures__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="top-adventures__book">
-              <img src="https://m.media-amazon.com/images/I/71ykU-RQ0nL._AC_SL1000_.jpg" />
-              <div class="top-adventures__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="top-adventures__book">
-              <img src="https://m.media-amazon.com/images/I/71xcuT33RpL._AC_SL1000_.jpg" />
-              <div class="top-adventures__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="top-adventures__book">
-              <img src="https://m.media-amazon.com/images/I/71EwgGuAS9L._AC_SL1000_.jpg" />
-              <div class="top-adventures__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-            </div>
-          <div class="top-adventures__book">
-              <img src="https://m.media-amazon.com/images/I/71Q1Iu4suSL._AC_SL1000_.jpg" />
-              <div class="top-adventures__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-            </div>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
         </div>
-        <h2>Popular authors</h2>
-        <div class="popular-authors">
-            <img src="https://m.media-amazon.com/images/I/B1deyDNJnjS._SY600_.jpg" />
-            <div class="popular-authors__data">
-              <h5 class="popular-authors__title">J. K. Rowling</h5>
-              <p class="popular-authors__bio">J.K. Rowling is best-known as the author of the seven Harry Potter books, which were published between 1997 and 2007. The enduringly popular adventures of Harry, Ron and Hermione have gone on to sell over 600 million copies, be translated into over 80 languages and made into eight blockbuster films.</p>
-            </div>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div class="lines box">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
         </div>
-    </main>
-  </body>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
+        </div>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
+        </div>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
+        </div>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
+        </div>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+      <li class="songs__song">
+        <div class="songs__data">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+          <div>
+            <span class="songs__author">
+              Taeyeon
+            </span>
+            <span class="songs__title">INVU</span>
+          </div>
+        </div>
+        <i class="fas fa-ellipsis-v"></i>
+      </li>
+    </ul>
+    <div class="now-playing">
+      <div>
+        <span class="now__author">Taeyeon</span>
+        <span class="now__song">INVU</span>
+      </div>
+      <div class="now__player">
+        <i class="fas fa-step-backward"></i>
+        <i class="fas fa-pause fa-2x"></i>
+        <i class="fas fa-step-forward"></i>
+      </div>
+    </div>
+  </section>
+  <section class="page">
+    <header>
+      <i class="fas fa-arrow-left"></i>
+      <i class="fas fa-ellipsis-v"></i>
+    </header>
+    <div class="cover">
+      <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Taeyeon_%E2%80%93_INVU.jpg" />
+    </div>
+    <div class="player">
+      <h4>INVU</h4>
+      <h5>Taeyeon</h5>
+    </div>
+    <div class="progress">
+      <div class="progress__time">
+        <span>1:56</span>
+        <span>3:37</span>
+      </div>
+      <input type="range" />
+    </div>
+    <div class="actions">
+      <i class="fas fa-redo"></i>
+      <i class="fas fa-step-backward fa-lg"></i>
+      <span>
+        <i class="fas fa-play fa-lg"></i>
+      </span>
+      <i class="fas fa-step-forward fa-lg"></i>
+      <i class="fas fa-random"></i>
+    </div>
+  </section>
+</body>
+
 </html>
