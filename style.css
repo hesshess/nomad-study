@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
-@import "range.css";
-@import "buffering.css";
 
 * {
   box-sizing: border-box;
@@ -17,9 +15,8 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-.page {
+.phone {
   width:320px;
-  height: 680px;
   background-color:white;
   min-height: 60vh;
   border-radius: 30px;
@@ -33,30 +30,30 @@ header {
   justify-content: space-between;
 }
 
-.taeyeon {
+.artist {
   margin-top:20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 
-.taeyeon img {
+.artist img {
   width: 90px;
   height:90px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom:30px;
-  box-shadow: 0 19px 38px #C9E2EE, 0 6px 12px #54494C;
+  box-shadow: 0 19px 38px rgba(220, 195, 205, 0.2), 0 15px 12px rgba(220, 195, 205, 0.3);
 }
 
-.taeyeon h2 {
+.artist h2 {
   font-size:26px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.taeyeon h6 {
+.artist h6 {
 font-weight: 700;
 opacity: 0.8;
 }
@@ -83,19 +80,16 @@ opacity: 0.8;
 .btns__btn:last-child {
     box-shadow: 0 19px 38px rgba(227, 226, 235, 0.5), 0 -5px 12px rgba(227, 226, 235, 0.3);
     margin-left: 5px;
-  background-color: #C9E2EE;
+}
+
+.btns__btn:last-child i {
   margin-right: 10px;
 }
 
 .songs {
-  margin-top:30px;
-  height: 300px;
-  overflow: scroll;
-  
+  margin-top:45px;
 }
-.songs__song:nth-child(3){
-  position: relative;
-}
+
 .songs__song,
 .songs__data {
   display: flex;
@@ -105,10 +99,6 @@ opacity: 0.8;
 
 .songs__song {
   margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 5px lightgrey;
-  padding: 10px 10px;
-  margin: 10px 0px;
 }
 
 .songs__song img {
@@ -131,15 +121,13 @@ opacity: 0.8;
   font-weight: 700;
 }
 
-.now-playing {
+.currently-playing {
   margin-top:40px;
   background-color:#222222;
-  opacity: 0.8;
-  width: 90%;
-  height: 60px;
+  width: 95%;
   padding:20px 30px;
   border-radius: 50px;
-  box-shadow:0 9px 15px rgba(34,34,34, 0.1), 0 5px 12px rgba(34,34,34, 0.2);
+  box-shadow:0 19px 38px rgba(34,34,34, 0.1), 0 15px 12px rgba(34,34,34, 0.2);
   color:white;
   display: flex;
   justify-content: space-between;
@@ -152,25 +140,25 @@ opacity: 0.8;
   bottom: 20px;
 }
 
-.now__author {
+.current__author {
   display: block;
-  opacity: 0.4;
+  opacity: 0.5;
   margin-bottom:5px;
   font-size: 12px;
 }
 
-.now__song {
+.current__song {
   font-weight: 600;
   text-transform: uppercase;
   font-size:16px;
 }
 
-.now__player {
+.current__player {
   display: flex;
   align-items: center;
 }
 
-.now__player i:nth-child(2){
+.current__player i:nth-child(2){
   margin:0 10px;
 }
 
@@ -185,7 +173,7 @@ opacity: 0.8;
 .cover img {
   width:80%;
   border-radius: 15px;
-  box-shadow: 0 19px 38px #768992, 0 1px 12px #3c414e;
+  box-shadow: 0 19px 38px rgba(214, 42, 30, 0.1), 0 15px 12px rgba(214, 42, 30, 0.2);
 }
 
 .player {
@@ -247,7 +235,6 @@ opacity: 0.8;
   top:-3.5px;
   left:58%;
 }
-
 
 .actions {
   display: flex;
