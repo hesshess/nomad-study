@@ -1,20 +1,16 @@
-body {
+h1 {
   font-family: sans-serif;
-  display: flex;
-}
-
-h2 {
   color: white;
 }
 
-.bigScreen {
+.large {
   background-color: #f1c40f;
 }
 
-.mediumScreen {
+.medium {
   background-color: #9b59b6;
 }
 
-.smallScreen {
+.small {
   background-color: #3498db;
 }
