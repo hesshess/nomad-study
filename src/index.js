@@ -1,19 +1,27 @@
-const range = document.querySelector('.range');
-const guess = document.querySelector('.guess');
-const result = document.querySelector('.result');
+const clockTitle = document.querySelector('.js-clock');
 
-function handleGuess(e) {
-  e.preventDefault();
-  const guessInput = guess.querySelector('input');
-  const max = range.value;
-  const random = Math.ceil(Math.random() * max);
-  const userGuess = parseInt(guessInput.value, 10);
-  const resultBox = result.querySelector('h1');
-  resultBox.innerHTML = `
-  You chose: ${userGuess},
-  the machine chose: ${random}.<br /><br />
-  ${userGuess === random ? 'YOU WON🎉' : 'YOU LOST💩'}
-  `;
+function calculateTime() {
+  const eve = new Date('2022-12-24:00:00:00');
+  const now = new Date();
+  const left = new Date(eve - now);
+  const secondsLeft = Math.floor(left / 1000);
+  const minutesLeft = Math.floor(secondsLeft / 60);
+  const hoursLeft = Math.floor(minutesLeft / 60);
+  const days = Math.floor(hoursLeft / 24);
+  const seconds = secondsLeft % 60;
+  const minutes = minutesLeft % 60;
+  const hours = hoursLeft % 24;
+  const daysResult = `${days}d`;
+  const hoursResult = `${hours}h`;
+  const minutesResult = `${minutes < 10 ? `0${minutes}` : minutes}m `;
+  const secondsResult = `${seconds < 10 ? `0${seconds}` : seconds}s`;
+
+  clockTitle.innerHTML = `${daysResult} ${hoursResult} ${minutesResult} ${secondsResult}`;
 }
 
-guess.addEventListener('submit', handleGuess);
+function init() {
+  calculateTime();
+  setInterval(calculateTime, 1000);
+}
+
+init();
