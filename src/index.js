@@ -1,27 +1,23 @@
 const clockTitle = document.querySelector('.js-clock');
 
-function calculateTime() {
-  const eve = new Date('2022-12-24:00:00:00');
+function getTime() {
+  const xmasDay = new Date(`${new Date().getFullYear()}-12-25:00:00:00+0900`);
   const now = new Date();
-  const left = new Date(eve - now);
-  const secondsLeft = Math.floor(left / 1000);
-  const minutesLeft = Math.floor(secondsLeft / 60);
-  const hoursLeft = Math.floor(minutesLeft / 60);
-  const days = Math.floor(hoursLeft / 24);
-  const seconds = secondsLeft % 60;
-  const minutes = minutesLeft % 60;
-  const hours = hoursLeft % 24;
-  const daysResult = `${days}d`;
-  const hoursResult = `${hours}h`;
-  const minutesResult = `${minutes < 10 ? `0${minutes}` : minutes}m `;
-  const secondsResult = `${seconds < 10 ? `0${seconds}` : seconds}s`;
-
-  clockTitle.innerHTML = `${daysResult} ${hoursResult} ${minutesResult} ${secondsResult}`;
+  // This is in milisecondsx
+  const difference = new Date(xmasDay - now);
+  const secondsInMs = Math.floor(difference / 1000);
+  const minutesInMs = Math.floor(secondsInMs / 60);
+  const hoursInMs = Math.floor(minutesInMs / 60);
+  const days = Math.floor(hoursInMs / 24);
+  const seconds = secondsInMs % 60;
+  const minutes = minutesInMs % 60;
+  const hours = hoursInMs % 24;
+  const daysStr = `${days < 10 ? `0${days}` : days}d`;
+  const hoursStr = `${hours < 10 ? `0${hours}` : hours}h`;
+  const minutesStr = `${minutes < 10 ? `0${minutes}` : minutes}m `;
+  const secondsStr = `${seconds < 10 ? `0${seconds}` : seconds}s`;
+  clockTitle.innerHTML = `${daysStr} ${hoursStr} ${minutesStr} ${secondsStr}`;
 }
 
-function init() {
-  calculateTime();
-  setInterval(calculateTime, 1000);
-}
-
-init();
+getTime();
+setInterval(getTime, 1000);
