@@ -1,23 +1,32 @@
-const clockTitle = document.querySelector('.js-clock');
+const colors = [
+  '#ef5777',
+  '#575fcf',
+  '#4bcffa',
+  '#34e7e4',
+  '#0be881',
+  '#f53b57',
+  '#3c40c6',
+  '#0fbcf9',
+  '#00d8d6',
+  '#05c46b',
+  '#ffc048',
+  '#ffdd59',
+  '#ff5e57',
+  '#d2dae2',
+  '#485460',
+  '#ffa801',
+  '#ffd32a',
+  '#ff3f34',
+];
+const btn = document.querySelector('button');
 
-function getTime() {
-  const xmasDay = new Date(`${new Date().getFullYear()}-12-25:00:00:00+0900`);
-  const now = new Date();
-  // This is in milisecondsx
-  const difference = new Date(xmasDay - now);
-  const secondsInMs = Math.floor(difference / 1000);
-  const minutesInMs = Math.floor(secondsInMs / 60);
-  const hoursInMs = Math.floor(minutesInMs / 60);
-  const days = Math.floor(hoursInMs / 24);
-  const seconds = secondsInMs % 60;
-  const minutes = minutesInMs % 60;
-  const hours = hoursInMs % 24;
-  const daysStr = `${days < 10 ? `0${days}` : days}d`;
-  const hoursStr = `${hours < 10 ? `0${hours}` : hours}h`;
-  const minutesStr = `${minutes < 10 ? `0${minutes}` : minutes}m `;
-  const secondsStr = `${seconds < 10 ? `0${seconds}` : seconds}s`;
-  clockTitle.innerHTML = `${daysStr} ${hoursStr} ${minutesStr} ${secondsStr}`;
+function handleClick() {
+  const a = colors[Math.floor(Math.random() * colors.length)];
+  const b = colors[Math.floor(Math.random() * colors.length)];
+  if (a === b) {
+    return handleClick();
+  }
+  document.body.style.background = `linear-gradient(to left, ${a}, ${b})`;
 }
 
-getTime();
-setInterval(getTime, 1000);
+btn.addEventListener('click', handleClick);
