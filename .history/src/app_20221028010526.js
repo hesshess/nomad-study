@@ -16,9 +16,15 @@ let isFill = false;
 let isDrawing = false;
 
 function onMove(event) {
-  if (isDrawing) {
+  if (isFill && isDrawing) {
     ctx.lineTo(event.offsetX, event.offsetY);
     ctx.stroke();
+    console.log(isStorke, isFill, isDrawing);
+    return;
+  } else if (isStorke && isDrawing) {
+    ctx.lineTo(event.offsetX, event.offsetY);
+    ctx.stroke();
+    console.log(isStorke, isFill, isDrawing);
     return;
   }
   ctx.moveTo(event.offsetX, event.offsetY);
@@ -26,6 +32,7 @@ function onMove(event) {
 
 function startPainting() {
   isDrawing = true;
+  console.log(isStorke, isFill, isDrawing);
 }
 function cancelPainting() {
   isDrawing = false;
@@ -33,6 +40,7 @@ function cancelPainting() {
     ctx.fill();
   }
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 
 function onColorChange(event) {
@@ -50,12 +58,14 @@ function onFillClick() {
   isStorke = false;
   isDrawing = false;
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 function onStrokeClick() {
   isFill = false;
   isStorke = true;
   isDrawing = false;
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 
 canvas.addEventListener('mousemove', onMove);

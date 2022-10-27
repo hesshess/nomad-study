@@ -1,4 +1,5 @@
 const fillBtn = document.getElementById('fill-btn');
+const eraseBtn = document.getElementById('erase-btn');
 const strokeBtn = document.getElementById('stroke-btn');
 const color = document.getElementById('color');
 const canvas = document.querySelector('canvas');
@@ -9,16 +10,22 @@ const CANVAS_HEIGHT = 800;
 
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
-ctx.lineWidth = 10;
+ctx.lineWidth = 5;
 
 let isStorke = true;
 let isFill = false;
 let isDrawing = false;
 
 function onMove(event) {
-  if (isDrawing) {
+  if (isFill && isDrawing) {
+    ctx.lineTo(event.offsetX, event.offsetY);
+    ctx.fill();
+    console.log(isStorke, isFill, isDrawing);
+    return;
+  } else if (isStorke && isDrawing) {
     ctx.lineTo(event.offsetX, event.offsetY);
     ctx.stroke();
+    console.log(isStorke, isFill, isDrawing);
     return;
   }
   ctx.moveTo(event.offsetX, event.offsetY);
@@ -26,13 +33,12 @@ function onMove(event) {
 
 function startPainting() {
   isDrawing = true;
+  console.log(isStorke, isFill, isDrawing);
 }
 function cancelPainting() {
   isDrawing = false;
-  if (isFill) {
-    ctx.fill();
-  }
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 
 function onColorChange(event) {
@@ -50,14 +56,19 @@ function onFillClick() {
   isStorke = false;
   isDrawing = false;
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 function onStrokeClick() {
   isFill = false;
   isStorke = true;
   isDrawing = false;
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
-
+function onEraseClick() {
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+}
 canvas.addEventListener('mousemove', onMove);
 canvas.addEventListener('mousedown', startPainting);
 canvas.addEventListener('mouseup', cancelPainting);
@@ -66,3 +77,4 @@ color.addEventListener('change', onColorChange);
 
 fillBtn.addEventListener('click', onFillClick);
 strokeBtn.addEventListener('click', onStrokeClick);
+eraseBtn.addEventListener('click', onEraseClick);

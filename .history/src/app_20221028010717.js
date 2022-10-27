@@ -26,6 +26,7 @@ function onMove(event) {
 
 function startPainting() {
   isDrawing = true;
+  console.log(isStorke, isFill, isDrawing);
 }
 function cancelPainting() {
   isDrawing = false;
@@ -33,6 +34,7 @@ function cancelPainting() {
     ctx.fill();
   }
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 
 function onColorChange(event) {
@@ -50,12 +52,14 @@ function onFillClick() {
   isStorke = false;
   isDrawing = false;
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 function onStrokeClick() {
   isFill = false;
   isStorke = true;
   isDrawing = false;
   ctx.beginPath();
+  console.log(isStorke, isFill, isDrawing);
 }
 
 canvas.addEventListener('mousemove', onMove);
