@@ -11,7 +11,7 @@ canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
 ctx.lineWidth = 10;
 
-let isStorke = true;
+let isStroke = true;
 let isFill = false;
 let isDrawing = false;
 
@@ -47,13 +47,13 @@ function onColorClick(event) {
 }
 function onFillClick() {
   isFill = true;
-  isStorke = false;
+  isStroke = false;
   isDrawing = false;
   ctx.beginPath();
 }
 function onStrokeClick() {
   isFill = false;
-  isStorke = true;
+  isStroke = true;
   isDrawing = false;
   ctx.beginPath();
 }
