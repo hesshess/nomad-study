@@ -19,7 +19,7 @@ const CANVAS_HEIGHT = 800;
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
 ctx.lineWidth = lineWidth.value;
-ctx.font = `${fontSz.value}px sans-serif`;
+ctx.font = 'bold 100px serif';
 ctx.lineCap = 'round';
 let isPainting = false;
 let isFilling = false;
@@ -44,7 +44,7 @@ function onLineWidthChange(event) {
   ctx.lineWidth = event.target.value;
 }
 function onFontSzChange(event) {
-  ctx.font = `${event.target.value}px sans-serif`;
+  ctx.font = 'bold 10px serif';
 }
 
 function onColorChange(event) {
@@ -102,6 +102,7 @@ function onDoubleClick(event) {
   if (text !== '') {
     ctx.save();
     ctx.lineWidth = 1;
+    ctx.font = '68px sans-serif';
     ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();
   }

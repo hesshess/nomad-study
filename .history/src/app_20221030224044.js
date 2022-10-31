@@ -44,7 +44,7 @@ function onLineWidthChange(event) {
   ctx.lineWidth = event.target.value;
 }
 function onFontSzChange(event) {
-  ctx.font = `${event.target.value}px sans-serif`;
+  ctx.font = `${event.target.value}px`;
 }
 
 function onColorChange(event) {
